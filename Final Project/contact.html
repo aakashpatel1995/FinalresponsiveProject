@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/raman.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Almendra Display' rel='stylesheet'>
+    <link rel="icon" href="images/favicon.png" type="image/icon type">
+</head>
+
+<body class="index">
+    <header>Fashion Hub</header>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="aboutus.html">About Us</a>
+        <a class="active" href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="function()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+    </script>
+
+    <div>
+
+        <h1 id="h1">Contact Us</h1>
+
+        <div class="wrapper">
+
+
+            <form action=" " method="post">
+                <label for="Name" class="Name">*Name</label>
+                <input type="text" name="myName" id="Name" required>
+                <label for="Phone Number">*Phone Number</label>
+                <input type="text" name="phoneNumber" id="phoneNumber" required>
+                <label for="myE-mail">*E-mail</label>
+                <input type="email" name="myE-mail" id="myE-mail" required>
+                <label for="myComments">*Comments</label>
+                <textarea type="text" name="myComments" id="myComments" rows="2" columns="40" required>
+
+                </textarea>
+
+                <input type="submit" value="Send Now" id="mySubmit">
+            </form>
+
+
+            <h1 id="slideshow">
+                <p class="slide">Tranding New in Town</p>
+            </h1>
+            <div id="show">
+                <img class="mySlides" src="images/slideshow/slideshow1.jpg" style="width:100%;">
+                <img class="mySlides" src="images/slideshow/slideshow2.jpg" style="width:100%">
+                <img class="mySlides" src="images/slideshow/slideshow3.jpg" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500);
+        }
+
+    </script>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <a href="index.html"><img class="logo" src="images/logo.png"></a>
+
+            <p class="footer-links">
+                <a href="men.html">MEN</a> |
+                <a href="women.html">WOMEN</a> |
+                <a href="kids.html">KIDS</a> |
+                <a href="aboutUs.html">ABOUT US</a> |
+                <a href="contactUs.html">CONTACT US</a> |
+            </p>
+
+            <p class="footer-company-name">Fashion Hub &copy; 2019</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>32 IT Hub</span> Toronto, Ontario</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 519-277-1920</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:fashionhub@contact.com">fashionhub@contact.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Most reputed company in all over Canada. Our company enhance our sale by website and social media. Follow us on facebook and twitter.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/uas/login"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
